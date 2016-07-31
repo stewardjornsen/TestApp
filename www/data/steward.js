@@ -61,8 +61,12 @@ var app = {
                 });
                 $('.owl-carousel').owlCarousel({
                     autoplay: true,
+					autoplayTimeout: 10000,
                     items: 1,
-                    loop: true,
+                    loop: false,
+					nav: true,
+					dots:true,
+					lazyload: true,
                     margin: 0
                 });
                 $('.popup').magnificPopup({
@@ -73,15 +77,7 @@ var app = {
 
             });
 			
-			 $('.owl-carousel').owlCarousel({
-                    autoplay: true,
-                    items: 1,
-                    loop: true,
-                    margin: 0
-                });
-                $('.popup').magnificPopup({
-                    type: "image"
-                });
+			
 
             var menu_items = {
                 page1: "Home",
@@ -97,9 +93,9 @@ var app = {
             var panel_end = '</ul>' +
                 '</div>';
 			var panel_mid;
-
-            $(document).one('pagebeforecreate', function() {
-                $(menu_items).each(function(x, e) {
+			
+			function createpanel(){
+			$(menu_items).each(function(x, e) {
                     keys = $.map(e, function(v, i) {
                         panel_start += '<li><a href="#' + i + '" data-transition="fade" data-theme="" data-icon="gear">' + v + '</a></li>';
 						$('#sidemenu').listview('refresh');
@@ -110,7 +106,13 @@ var app = {
 				panel_start += panel_end;
                 $.mobile.pageContainer.prepend(panel_start);
 
-                $("#mypanel").panel();
+                $("#mypanel").panel();	
+			}
+
+createpanel();
+
+            $(document).one('pagebeforecreate', function() {
+                createpanel();
             });
 
             //console.log(j);
