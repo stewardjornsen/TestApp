@@ -98,8 +98,7 @@ var app = {
 			$(menu_items).each(function(x, e) {
                     keys = $.map(e, function(v, i) {
                         panel_start += '<li><a href="#' + i + '" data-transition="fade" data-theme="" data-icon="gear">' + v + '</a></li>';
-						$('#sidemenu').listview('refresh');
-                        console.log(i);
+						
                     });
 
                 });
