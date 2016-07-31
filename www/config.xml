@@ -5,7 +5,7 @@
   <content src="index.html"/>
   <preference name="DisallowOverscroll" value="true"/>
   <preference name="android-minSdkVersion" value="14"/>
-<preference name="Orientation" value="landscape" />
+  <preference name="orientation" value="landscape" />
   <plugin name="cordova-plugin-battery-status" source="npm" spec="~1.1.1"/>
   <plugin name="cordova-plugin-camera" source="npm" spec="~2.1.1"/>
   <plugin name="cordova-plugin-media-capture" source="npm" spec="~1.2.0"/>
@@ -27,8 +27,8 @@
   <plugin name="cordova-plugin-vibration" source="npm" spec="~2.1.0"/>
   <plugin name="cordova-plugin-whitelist" source="npm" spec="~1.2.1"/>
   <icon src="icon.png"/>
-   <splash src="splash.png" />
-  <platform name="android">
+    <splash src="splash.png" />
+    <platform name="android">
     <icon src="www/res/icons/android/icon-36-ldpi.png" density="ldpi"/>
     <icon src="www/res/icons/android/icon-48-mdpi.png" density="mdpi"/>
     <icon src="www/res/icons/android/icon-72-hdpi.png" density="hdpi"/>
@@ -39,7 +39,11 @@
     <splash src="www/res/screen/android/screen-mdpi-portrait.png" density="land-mdpi"/>
     <splash src="www/res/screen/android/screen-hdpi-portrait.png" density="land-hdpi"/>
     <splash src="www/res/screen/android/screen-xhdpi-portrait.png" density="land-xhdpi"/>
+<<<<<<< HEAD
 	<preference name="android-manifest/@android:installLocation" value="preferExternal" />
+=======
+    <preference name="android-manifest/@android:installLocation" value="preferExternal" />
+>>>>>>> origin/master
   </platform>
   <platform name="ios">
     <icon src="www/res/icons/ios/icon.png" platform="ios" width="57" height="57"/>
